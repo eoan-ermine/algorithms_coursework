@@ -26,7 +26,7 @@ namespace AlgorithmsCourseworkGUI
             if (result == 1)
             {
                 this.Hide();
-                Question08 nextForm = new Question08();
+                Question09 nextForm = new Question09();
                 nextForm.Show();
             }
         }

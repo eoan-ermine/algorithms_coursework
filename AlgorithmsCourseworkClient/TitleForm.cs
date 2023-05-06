@@ -24,7 +24,7 @@ namespace AlgorithmsCourseworkGUI
         private void testButton_Click(object sender, System.EventArgs e)
         {
             this.Hide();
-            Question08 nextForm = new Question08();
+            Question01 nextForm = new Question01();
             nextForm.Show();
         }
     }

@@ -5,7 +5,7 @@ namespace AlgorithmsCourseworkLibrary
     public class AlgorithmsCoursework
     {
         public static int n = 0;
-        public static bool[] answers = new bool[8];
+        public static bool[] answers = new bool[16];
 
         public static int UnaryQuestion(int index, string userAnswer, string rightAnswer)
         {
