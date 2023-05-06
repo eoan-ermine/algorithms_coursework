@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AlgorithmsCourseworkClient
+namespace AlgorithmsCourseworkGUI
 {
     internal static class Program
     {

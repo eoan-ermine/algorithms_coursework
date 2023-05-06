@@ -1,4 +1,4 @@
-﻿namespace AlgorithmsCourseworkClient
+﻿namespace AlgorithmsCourseworkGUI
 {
     partial class TitleForm
     {
@@ -38,7 +38,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.contentsButton = new System.Windows.Forms.Button();
+            this.theoryButton = new System.Windows.Forms.Button();
+            this.testButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -146,29 +147,44 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.contentsButton);
+            this.flowLayoutPanel1.Controls.Add(this.theoryButton);
+            this.flowLayoutPanel1.Controls.Add(this.testButton);
             this.flowLayoutPanel1.Controls.Add(this.exitButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(420, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(342, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(322, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(478, 53);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
-            // contentsButton
+            // theoryButton
             // 
-            this.contentsButton.AutoSize = true;
-            this.contentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contentsButton.Location = new System.Drawing.Point(3, 3);
-            this.contentsButton.Name = "contentsButton";
-            this.contentsButton.Size = new System.Drawing.Size(232, 34);
-            this.contentsButton.TabIndex = 0;
-            this.contentsButton.Text = "Перейти к содержанию";
-            this.contentsButton.UseVisualStyleBackColor = true;
+            this.theoryButton.AutoSize = true;
+            this.theoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.theoryButton.Location = new System.Drawing.Point(3, 3);
+            this.theoryButton.Name = "theoryButton";
+            this.theoryButton.Size = new System.Drawing.Size(232, 34);
+            this.theoryButton.TabIndex = 0;
+            this.theoryButton.Text = "Электронный конспект";
+            this.theoryButton.UseVisualStyleBackColor = true;
+            this.theoryButton.Click += new System.EventHandler(this.theoryButton_Click);
+            // 
+            // testButton
+            // 
+            this.testButton.AutoSize = true;
+            this.testButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.testButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testButton.Location = new System.Drawing.Point(241, 3);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(150, 34);
+            this.testButton.TabIndex = 2;
+            this.testButton.Text = "Тестирование";
+            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // exitButton
             // 
             this.exitButton.AutoSize = true;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(241, 3);
+            this.exitButton.Location = new System.Drawing.Point(397, 3);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(78, 34);
             this.exitButton.TabIndex = 1;
@@ -176,7 +192,7 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // Form1
+            // TitleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +206,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "TitleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Титульный лист — курсовая работа — Сидорук Данил Вадимович, БФИ-2202";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -214,8 +230,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button contentsButton;
+        private System.Windows.Forms.Button theoryButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button testButton;
     }
 }
 
