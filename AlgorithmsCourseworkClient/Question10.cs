@@ -22,16 +22,14 @@ namespace AlgorithmsCourseworkGUI
             if (CB1.SelectedIndex == -1 || CB2.SelectedIndex == -1 || CB3.SelectedIndex == -1 || CB4.SelectedIndex == -1)
             {
                 MessageBox.Show("Пожалуйста, выберите ответ во всех полях", "Нет ответа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else if (CB1.SelectedIndex == 2 && CB2.SelectedIndex == 3 && CB3.SelectedIndex == 1 && CB4.SelectedIndex == 0)
+            
+            if (CB1.SelectedIndex == 2 && CB2.SelectedIndex == 3 && CB3.SelectedIndex == 1 && CB4.SelectedIndex == 0)
             {
                 MessageBox.Show("Вы ответили правильно", "Правильный ответ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AlgorithmsCoursework.n += 1;
                 AlgorithmsCoursework.answers[9] = true;
-
-                this.Hide();
-                Question11 nextForm = new Question11();
-                nextForm.Show();
             }
             else
             {
@@ -39,6 +37,9 @@ namespace AlgorithmsCourseworkGUI
                 AlgorithmsCoursework.answers[9] = false;
             }
 
+            this.Hide();
+            Question11 nextForm = new Question11();
+            nextForm.Show();
         }
     }
 }

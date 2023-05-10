@@ -23,8 +23,10 @@ namespace AlgorithmsCourseworkGUI
             if (CLB.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Вы не выбрали ни один из вариантов ответа", "Нет ответа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else if (
+            
+            if (
                 CLB.CheckedItems.Count == 2 &&
                 CLB.CheckedItems.Contains("Главный календарный план производства") && CLB.CheckedItems.Contains("Данные о рабочих центрах")
             )
@@ -32,10 +34,6 @@ namespace AlgorithmsCourseworkGUI
                 MessageBox.Show("Вы ответили правильно", "Правильный ответ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AlgorithmsCoursework.n += 1;
                 AlgorithmsCoursework.answers[15] = true;
-
-                this.Hide();
-                Question16 nextForm = new Question16();
-                nextForm.Show();
             }
             else
             {
@@ -43,6 +41,9 @@ namespace AlgorithmsCourseworkGUI
                 AlgorithmsCoursework.answers[15] = false;
             }
 
+            this.Hide();
+            ResultForm nextForm = new ResultForm();
+            nextForm.Show();
         }
     }
 }

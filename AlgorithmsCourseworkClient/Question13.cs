@@ -28,10 +28,6 @@ namespace AlgorithmsCourseworkGUI
                 MessageBox.Show("Вы ответили правильно", "Правильный ответ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AlgorithmsCoursework.n += 1;
                 AlgorithmsCoursework.answers[12] = true;
-
-                this.Hide();
-                Question14 nextForm = new Question14();
-                nextForm.Show();
             }
             else
             {
@@ -39,6 +35,9 @@ namespace AlgorithmsCourseworkGUI
                 AlgorithmsCoursework.answers[12] = false;
             }
 
+            this.Hide();
+            Question14 nextForm = new Question14();
+            nextForm.Show();
         }
 
         private void HSB_Scroll(object sender, ScrollEventArgs e)

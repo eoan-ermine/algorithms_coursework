@@ -24,16 +24,16 @@ namespace AlgorithmsCourseworkGUI
                 MessageBox.Show("Вы ответили правильно", "Правильный ответ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AlgorithmsCoursework.n += 1;
                 AlgorithmsCoursework.answers[11] = true;
-
-                this.Hide();
-                Question13 nextForm = new Question13();
-                nextForm.Show();
             }
             else
             {
                 MessageBox.Show("Вы ответили неправильно", "Неправильный ответ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 AlgorithmsCoursework.answers[11] = false;
             }
+
+            this.Hide();
+            Question13 nextForm = new Question13();
+            nextForm.Show();
         }
     }
 }
