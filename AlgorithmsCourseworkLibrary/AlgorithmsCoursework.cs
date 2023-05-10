@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace AlgorithmsCourseworkLibrary
 {
@@ -6,6 +7,7 @@ namespace AlgorithmsCourseworkLibrary
     {
         public static int n = 0;
         public static bool[] answers = new bool[16];
+        public static int version = 100;
 
         public static int UnaryQuestion(int index, string userAnswer, string rightAnswer)
         {
@@ -161,5 +163,26 @@ namespace AlgorithmsCourseworkLibrary
             }
         }
 
+        public static void setupVersion(ToolStripStatusLabel label)
+        {
+            int version = AlgorithmsCoursework.version;
+            int major = version / 100, minor = (version / 10) % 10, patch = version % 10;
+            label.Text = string.Format("Версия программы: {0}.{1}.{2}", major, minor, patch);
+        }
+
+        public static void setupTimer(ToolStripStatusLabel label)
+        {
+            Timer timer = new Timer();
+            timer.Tick += (object e, EventArgs v) => updateDate(label);
+            timer.Interval = 1000;
+            timer.Start();
+            updateDate(label);
+        }
+
+        private static void updateDate(ToolStripStatusLabel label)
+        {
+            string dateInfo = DateTime.Now.ToString("dddd, dd MMMM yyyy, HH:mm:ss");
+            label.Text = dateInfo.Substring(0, 1).ToUpper() + dateInfo.Substring(1);
+        }
     }
 }

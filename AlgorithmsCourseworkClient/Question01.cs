@@ -11,6 +11,9 @@ namespace AlgorithmsCourseworkGUI
         {
             InitializeComponent();
             answerInput.Focus();
+
+            AlgorithmsCoursework.setupVersion(versionLabel);
+            AlgorithmsCoursework.setupTimer(timeLabel);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

@@ -14,6 +14,9 @@ namespace AlgorithmsCourseworkGUI
             InitializeComponent();
             value = HSB.Value;
             answerLabel.Text = "Ваш ответ: " + value.ToString();
+
+            AlgorithmsCoursework.setupVersion(versionLabel);
+            AlgorithmsCoursework.setupTimer(timeLabel);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

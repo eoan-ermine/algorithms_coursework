@@ -38,21 +38,26 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.unionButton = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.timeLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 567);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 556);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1163, 59);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1163, 58);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // flowLayoutPanel1
@@ -63,7 +68,7 @@
             this.flowLayoutPanel1.Controls.Add(this.confirmButton);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(462, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(238, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(238, 52);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // confirmButton
@@ -81,7 +86,7 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(0, 521);
+            this.label8.Location = new System.Drawing.Point(0, 512);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(1179, 2);
             this.label8.TabIndex = 13;
@@ -153,7 +158,7 @@
             // 
             this.unionButton.AutoSize = true;
             this.unionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.unionButton.Location = new System.Drawing.Point(498, 527);
+            this.unionButton.Location = new System.Drawing.Point(498, 516);
             this.unionButton.Name = "unionButton";
             this.unionButton.Size = new System.Drawing.Size(168, 39);
             this.unionButton.TabIndex = 19;
@@ -161,11 +166,44 @@
             this.unionButton.UseVisualStyleBackColor = true;
             this.unionButton.Click += new System.EventHandler(this.unionButton_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timeLabel,
+            this.toolStripStatusLabel1,
+            this.versionLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 604);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1163, 22);
+            this.statusStrip1.TabIndex = 21;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(79, 17);
+            this.timeLabel.Text = "Дата и время";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(993, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.versionLabel.Size = new System.Drawing.Size(76, 17);
+            this.versionLabel.Text = "Версия: 1.0.0";
+            this.versionLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // Question08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 626);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.unionButton);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
@@ -181,6 +219,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +238,9 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button unionButton;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel timeLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel versionLabel;
     }
 }

@@ -37,17 +37,22 @@
             this.HSB = new System.Windows.Forms.HScrollBar();
             this.answerLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.timeLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 567);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 553);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -133,11 +138,44 @@
             this.label8.Size = new System.Drawing.Size(1179, 2);
             this.label8.TabIndex = 27;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timeLabel,
+            this.toolStripStatusLabel1,
+            this.versionLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 604);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1163, 22);
+            this.statusStrip1.TabIndex = 28;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(79, 17);
+            this.timeLabel.Text = "Дата и время";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(962, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.versionLabel.Size = new System.Drawing.Size(76, 17);
+            this.versionLabel.Text = "Версия: 1.0.0";
+            this.versionLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // Question14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 626);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.answerLabel);
             this.Controls.Add(this.HSB);
@@ -152,6 +190,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +208,9 @@
         private System.Windows.Forms.HScrollBar HSB;
         private System.Windows.Forms.Label answerLabel;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel timeLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel versionLabel;
     }
 }

@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
+
+using AlgorithmsCourseworkLibrary;
 
 namespace AlgorithmsCourseworkGUI
 {
@@ -7,8 +10,10 @@ namespace AlgorithmsCourseworkGUI
         public TitleForm()
         {
             InitializeComponent();
-        }
 
+            AlgorithmsCoursework.setupVersion(versionLabel);
+            AlgorithmsCoursework.setupTimer(timeLabel);
+        }
         private void exitButton_Click(object sender, System.EventArgs e)
         {
             Application.Exit();

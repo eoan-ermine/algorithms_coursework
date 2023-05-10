@@ -121,4 +121,7 @@
     <value>Что в контексте подхода управления ИТ на основе услуг называется любым отклонением, любым событием, которое отличается от прописанных норм в договоре, от нормального состояния?
 Ответ дайте в именительном падеже, единственном числе.</value>
   </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

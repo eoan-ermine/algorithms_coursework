@@ -10,6 +10,9 @@ namespace AlgorithmsCourseworkGUI
         public Question02()
         {
             InitializeComponent();
+
+            AlgorithmsCoursework.setupVersion(versionLabel);
+            AlgorithmsCoursework.setupTimer(timeLabel);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
