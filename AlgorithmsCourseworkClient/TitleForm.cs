@@ -32,5 +32,12 @@ namespace AlgorithmsCourseworkGUI
             Question01 nextForm = new Question01();
             nextForm.Show();
         }
+
+        private void playerButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlayerForm nextForm = new PlayerForm();
+            nextForm.Show();
+        }
     }
 }

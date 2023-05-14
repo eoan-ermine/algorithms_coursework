@@ -43,8 +43,9 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.timeLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.playerButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -154,10 +155,11 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.theoryButton);
             this.flowLayoutPanel1.Controls.Add(this.testButton);
+            this.flowLayoutPanel1.Controls.Add(this.playerButton);
             this.flowLayoutPanel1.Controls.Add(this.exitButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(342, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(272, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(478, 43);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(618, 43);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // theoryButton
@@ -189,7 +191,7 @@
             // 
             this.exitButton.AutoSize = true;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(397, 3);
+            this.exitButton.Location = new System.Drawing.Point(537, 3);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(78, 34);
             this.exitButton.TabIndex = 1;
@@ -215,6 +217,12 @@
             this.timeLabel.Size = new System.Drawing.Size(79, 17);
             this.timeLabel.Text = "Дата и время";
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(993, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
             // versionLabel
             // 
             this.versionLabel.Name = "versionLabel";
@@ -223,11 +231,17 @@
             this.versionLabel.Text = "Версия: 1.0.0";
             this.versionLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // toolStripStatusLabel1
+            // playerButton
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(993, 17);
-            this.toolStripStatusLabel1.Spring = true;
+            this.playerButton.AutoSize = true;
+            this.playerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.playerButton.Location = new System.Drawing.Point(397, 3);
+            this.playerButton.Name = "playerButton";
+            this.playerButton.Size = new System.Drawing.Size(134, 34);
+            this.playerButton.TabIndex = 3;
+            this.playerButton.Text = "Медиаплеер";
+            this.playerButton.UseVisualStyleBackColor = true;
+            this.playerButton.Click += new System.EventHandler(this.playerButton_Click);
             // 
             // TitleForm
             // 
@@ -277,6 +291,7 @@
         private System.Windows.Forms.ToolStripStatusLabel timeLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
+        private System.Windows.Forms.Button playerButton;
     }
 }
 
