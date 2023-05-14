@@ -1,6 +1,4 @@
-﻿// PlayerForm.cs
-
-using AlgorithmsCourseworkLibrary;
+﻿using AlgorithmsCourseworkLibrary;
 using System;
 using System.Windows.Forms;
 

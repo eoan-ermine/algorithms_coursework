@@ -1,6 +1,4 @@
-﻿// TheoryForm.cs
-
-using AlgorithmsCourseworkLibrary;
+﻿using AlgorithmsCourseworkLibrary;
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Windows.Forms;
@@ -28,7 +26,7 @@ namespace AlgorithmsCourseworkGUI
             webView.CoreWebView2.Navigate("http://localhost/report.pdf");
 
         }
-        // ...
+=
         private void SetPage(int pageIndex)
         {
             string newUri = "http://localhost/report.pdf#page=" + pageIndex;
