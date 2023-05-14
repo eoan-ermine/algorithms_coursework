@@ -116,6 +116,7 @@
             this.openButton.TabIndex = 4;
             this.openButton.Text = "Открыть файл word с результатами тестирования";
             this.openButton.UseVisualStyleBackColor = true;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // exitButton
             // 
