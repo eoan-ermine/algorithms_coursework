@@ -102,6 +102,25 @@ namespace AlgorithmsCourseworkGUI
             range.Borders.get_Item(XlBordersIndex.xlEdgeTop).LineStyle =
                 Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
 
+            workSheet.Cells[4, 1] = "Правильные ответы";
+            workSheet.Cells[4, 2] = AlgorithmsCoursework.n;
+            workSheet.Cells[5, 1] = "Неправильные ответы";
+            workSheet.Cells[5, 2] = AlgorithmsCoursework.answers.Length - AlgorithmsCoursework.n;
+
+            object misValue = System.Reflection.Missing.Value;
+
+            Microsoft.Office.Interop.Excel.Range chartRange;
+
+            ChartObjects xlCharts = (ChartObjects)workSheet.ChartObjects(Type.Missing);
+            ChartObject myChart = (ChartObject)xlCharts.Add(0, 80, 300, 250);
+            Microsoft.Office.Interop.Excel.Chart chartPage = myChart.Chart;
+
+            chartRange = workSheet.get_Range("A4", "B5");
+            chartPage.SetSourceData(chartRange, misValue);
+            chartPage.ChartType = XlChartType.xlColumnClustered;
+
+            chartPage.Legend.Delete();
+
             workSheet.Range[("A7")].Select();
             app.Visible = true;
             app.UserControl= true;
