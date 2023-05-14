@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.fetchButton = new System.Windows.Forms.Button();
             this.writeButton = new System.Windows.Forms.Button();
             this.resultView = new System.Windows.Forms.DataGridView();
@@ -45,6 +45,8 @@
             this.timeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.writeExcelButton = new System.Windows.Forms.Button();
+            this.openExcelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.resultView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -120,7 +122,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(536, 211);
+            this.exitButton.Location = new System.Drawing.Point(536, 298);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(220, 57);
             this.exitButton.TabIndex = 5;
@@ -130,20 +132,20 @@
             // 
             // chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart.Legends.Add(legend2);
             this.chart.Location = new System.Drawing.Point(805, 36);
             this.chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Верно";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Неверно";
-            this.chart.Series.Add(series1);
-            this.chart.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Верно";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Неверно";
+            this.chart.Series.Add(series3);
+            this.chart.Series.Add(series4);
             this.chart.Size = new System.Drawing.Size(300, 525);
             this.chart.TabIndex = 6;
             this.chart.Text = "chart1";
@@ -180,11 +182,33 @@
             this.versionLabel.Text = "Версия: 1.0.0";
             this.versionLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
+            // writeExcelButton
+            // 
+            this.writeExcelButton.Location = new System.Drawing.Point(12, 211);
+            this.writeExcelButton.Name = "writeExcelButton";
+            this.writeExcelButton.Size = new System.Drawing.Size(220, 57);
+            this.writeExcelButton.TabIndex = 24;
+            this.writeExcelButton.Text = "Запись результатов в excel";
+            this.writeExcelButton.UseVisualStyleBackColor = true;
+            this.writeExcelButton.Click += new System.EventHandler(this.writeExcelButton_Click);
+            // 
+            // openExcelButton
+            // 
+            this.openExcelButton.Location = new System.Drawing.Point(536, 211);
+            this.openExcelButton.Name = "openExcelButton";
+            this.openExcelButton.Size = new System.Drawing.Size(220, 57);
+            this.openExcelButton.TabIndex = 25;
+            this.openExcelButton.Text = "Открыть файл excel с результатами тестирования";
+            this.openExcelButton.UseVisualStyleBackColor = true;
+            this.openExcelButton.Click += new System.EventHandler(this.openExcelButton_Click);
+            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 626);
+            this.Controls.Add(this.openExcelButton);
+            this.Controls.Add(this.writeExcelButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.exitButton);
@@ -220,5 +244,7 @@
         private System.Windows.Forms.ToolStripStatusLabel timeLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
+        private System.Windows.Forms.Button writeExcelButton;
+        private System.Windows.Forms.Button openExcelButton;
     }
 }
