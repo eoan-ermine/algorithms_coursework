@@ -274,7 +274,7 @@ namespace AlgorithmsCourseworkLibrary
             app.Visible = true;
             app.UserControl = true;
         }
-        public static void WriteWord(int[] keys, bool[] values)
+        public static void WriteWord(DataGridView view)
         {
             Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
             var Word = new Microsoft.Office.Interop.Word.Application
@@ -288,11 +288,16 @@ namespace AlgorithmsCourseworkLibrary
             object t1 = WdDefaultTableBehavior.wdWord9TableBehavior;
             object t2 = WdAutoFitBehavior.wdAutoFitContent;
 
-            Table tbl = Word.ActiveDocument.Tables.Add(Word.Selection.Range, 2, values.Length, t1, t2);
-            for (int i = 0; i != keys.Length; ++i)
+            int length = view.RowCount, columns = view.ColumnCount;
+            Table tbl = Word.ActiveDocument.Tables.Add(Word.Selection.Range, columns, length, t1, t2);
+
+            for (int i = 0; i != columns; ++i)
             {
-                tbl.Cell(1, i + 1).Range.InsertAfter("[" + Convert.ToString(keys[i]) + "]");
-                tbl.Cell(2, i + 1).Range.InsertAfter(Convert.ToInt32(values[i]).ToString());
+                for (int j = 0; j != length; ++j)
+                {
+                    object value = view.Rows[j].Cells[i].Value;
+                    tbl.Cell(i + 1, j + 1).Range.InsertAfter(value == null ? "null": value.ToString());
+                }
             }
         }
 

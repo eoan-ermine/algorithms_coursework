@@ -42,10 +42,13 @@ namespace AlgorithmsCourseworkGUI
 
         private void writeButton_Click(object sender, EventArgs e)
         {
-            AlgorithmsCoursework.WriteWord(
-                Enumerable.Range(1, AlgorithmsCoursework.answers.Length).ToArray(),
-                AlgorithmsCoursework.answers
-            );
+            if (resultView.RowCount == 0)
+            {
+                MessageBox.Show("Получите результаты тестирования", "Операция невозможна", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            AlgorithmsCoursework.WriteWord(resultView);
         }
 
         private void openButton_Click(object sender, EventArgs e)
@@ -93,6 +96,18 @@ namespace AlgorithmsCourseworkGUI
 
             AlgorithmsCoursework.Sort(sortedKeys, sortedValues);
             AlgorithmsCoursework.WriteExcel(sortedKeys, sortedValues);
+        }
+
+        private void insertColumnButton_Click(object sender, EventArgs e)
+        {
+            string name = "";
+            while (name == "")
+                name = Microsoft.VisualBasic.Interaction.InputBox("Пожалуйста, введите название нового столбца", "Создание столбца");
+
+            var column = new DataGridViewTextBoxColumn();
+            column.ReadOnly = false;
+            column.Name = name;
+            resultView.Columns.Add(column);
         }
     }
 }

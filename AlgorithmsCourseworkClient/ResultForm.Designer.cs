@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.fetchButton = new System.Windows.Forms.Button();
             this.writeButton = new System.Windows.Forms.Button();
             this.resultView = new System.Windows.Forms.DataGridView();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.result = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plotButton = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
@@ -52,6 +50,9 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sortButton = new System.Windows.Forms.Button();
+            this.insertColumnButton = new System.Windows.Forms.Button();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.result = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.resultView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -61,7 +62,7 @@
             // fetchButton
             // 
             this.fetchButton.Location = new System.Drawing.Point(16, 44);
-            this.fetchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fetchButton.Margin = new System.Windows.Forms.Padding(4);
             this.fetchButton.Name = "fetchButton";
             this.fetchButton.Size = new System.Drawing.Size(160, 70);
             this.fetchButton.TabIndex = 0;
@@ -71,12 +72,12 @@
             // 
             // writeButton
             // 
-            this.writeButton.Location = new System.Drawing.Point(16, 151);
-            this.writeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.writeButton.Location = new System.Drawing.Point(16, 259);
+            this.writeButton.Margin = new System.Windows.Forms.Padding(4);
             this.writeButton.Name = "writeButton";
             this.writeButton.Size = new System.Drawing.Size(160, 70);
             this.writeButton.TabIndex = 1;
-            this.writeButton.Text = "Запись результатов в word";
+            this.writeButton.Text = "Запись таблицы в word";
             this.writeButton.UseVisualStyleBackColor = true;
             this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
             // 
@@ -88,38 +89,17 @@
             this.resultView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.number,
             this.result});
-            this.resultView.Location = new System.Drawing.Point(236, 44);
-            this.resultView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resultView.Location = new System.Drawing.Point(184, 44);
+            this.resultView.Margin = new System.Windows.Forms.Padding(4);
             this.resultView.Name = "resultView";
-            this.resultView.ReadOnly = true;
             this.resultView.RowHeadersWidth = 51;
-            this.resultView.Size = new System.Drawing.Size(227, 646);
+            this.resultView.Size = new System.Drawing.Size(317, 646);
             this.resultView.TabIndex = 2;
-            // 
-            // number
-            // 
-            this.number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.number.Frozen = true;
-            this.number.HeaderText = "№";
-            this.number.MinimumWidth = 6;
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            this.number.Width = 50;
-            // 
-            // result
-            // 
-            this.result.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.result.Frozen = true;
-            this.result.HeaderText = "Результат";
-            this.result.MinimumWidth = 6;
-            this.result.Name = "result";
-            this.result.ReadOnly = true;
-            this.result.Width = 106;
             // 
             // plotButton
             // 
             this.plotButton.Location = new System.Drawing.Point(1015, 47);
-            this.plotButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plotButton.Margin = new System.Windows.Forms.Padding(4);
             this.plotButton.Name = "plotButton";
             this.plotButton.Size = new System.Drawing.Size(160, 70);
             this.plotButton.TabIndex = 3;
@@ -130,7 +110,7 @@
             // openButton
             // 
             this.openButton.Location = new System.Drawing.Point(1015, 154);
-            this.openButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openButton.Margin = new System.Windows.Forms.Padding(4);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(160, 70);
             this.openButton.TabIndex = 4;
@@ -141,7 +121,7 @@
             // exitButton
             // 
             this.exitButton.Location = new System.Drawing.Point(1015, 368);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(160, 70);
             this.exitButton.TabIndex = 5;
@@ -151,22 +131,22 @@
             // 
             // chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(1213, 44);
-            this.chart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            chartArea3.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart.Legends.Add(legend3);
+            this.chart.Location = new System.Drawing.Point(1183, 44);
+            this.chart.Margin = new System.Windows.Forms.Padding(4);
             this.chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Верно";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Неверно";
-            this.chart.Series.Add(series1);
-            this.chart.Series.Add(series2);
-            this.chart.Size = new System.Drawing.Size(321, 646);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Верно";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Неверно";
+            this.chart.Series.Add(series5);
+            this.chart.Series.Add(series6);
+            this.chart.Size = new System.Drawing.Size(351, 646);
             this.chart.TabIndex = 6;
             this.chart.Text = "chart1";
             // 
@@ -206,8 +186,8 @@
             // 
             // writeExcelButton
             // 
-            this.writeExcelButton.Location = new System.Drawing.Point(16, 260);
-            this.writeExcelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.writeExcelButton.Location = new System.Drawing.Point(16, 368);
+            this.writeExcelButton.Margin = new System.Windows.Forms.Padding(4);
             this.writeExcelButton.Name = "writeExcelButton";
             this.writeExcelButton.Size = new System.Drawing.Size(160, 70);
             this.writeExcelButton.TabIndex = 24;
@@ -218,7 +198,7 @@
             // openExcelButton
             // 
             this.openExcelButton.Location = new System.Drawing.Point(1015, 261);
-            this.openExcelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openExcelButton.Margin = new System.Windows.Forms.Padding(4);
             this.openExcelButton.Name = "openExcelButton";
             this.openExcelButton.Size = new System.Drawing.Size(160, 70);
             this.openExcelButton.TabIndex = 25;
@@ -229,7 +209,7 @@
             // writeSortExcelButton
             // 
             this.writeSortExcelButton.Location = new System.Drawing.Point(509, 154);
-            this.writeSortExcelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.writeSortExcelButton.Margin = new System.Windows.Forms.Padding(4);
             this.writeSortExcelButton.Name = "writeSortExcelButton";
             this.writeSortExcelButton.Size = new System.Drawing.Size(160, 70);
             this.writeSortExcelButton.TabIndex = 29;
@@ -245,12 +225,12 @@
             this.sortedView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.sortedView.Location = new System.Drawing.Point(729, 44);
-            this.sortedView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortedView.Location = new System.Drawing.Point(677, 44);
+            this.sortedView.Margin = new System.Windows.Forms.Padding(4);
             this.sortedView.Name = "sortedView";
             this.sortedView.ReadOnly = true;
             this.sortedView.RowHeadersWidth = 51;
-            this.sortedView.Size = new System.Drawing.Size(227, 646);
+            this.sortedView.Size = new System.Drawing.Size(330, 646);
             this.sortedView.TabIndex = 28;
             // 
             // dataGridViewTextBoxColumn1
@@ -276,7 +256,7 @@
             // sortButton
             // 
             this.sortButton.Location = new System.Drawing.Point(509, 47);
-            this.sortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortButton.Margin = new System.Windows.Forms.Padding(4);
             this.sortButton.Name = "sortButton";
             this.sortButton.Size = new System.Drawing.Size(160, 70);
             this.sortButton.TabIndex = 27;
@@ -284,11 +264,43 @@
             this.sortButton.UseVisualStyleBackColor = true;
             this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
             // 
+            // insertColumnButton
+            // 
+            this.insertColumnButton.Location = new System.Drawing.Point(16, 154);
+            this.insertColumnButton.Margin = new System.Windows.Forms.Padding(4);
+            this.insertColumnButton.Name = "insertColumnButton";
+            this.insertColumnButton.Size = new System.Drawing.Size(160, 70);
+            this.insertColumnButton.TabIndex = 30;
+            this.insertColumnButton.Text = "Вставить столбец";
+            this.insertColumnButton.UseVisualStyleBackColor = true;
+            this.insertColumnButton.Click += new System.EventHandler(this.insertColumnButton_Click);
+            // 
+            // number
+            // 
+            this.number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.number.Frozen = true;
+            this.number.HeaderText = "№";
+            this.number.MinimumWidth = 6;
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            this.number.Width = 50;
+            // 
+            // result
+            // 
+            this.result.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.result.Frozen = true;
+            this.result.HeaderText = "Результат";
+            this.result.MinimumWidth = 6;
+            this.result.Name = "result";
+            this.result.ReadOnly = true;
+            this.result.Width = 106;
+            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 770);
+            this.Controls.Add(this.insertColumnButton);
             this.Controls.Add(this.writeSortExcelButton);
             this.Controls.Add(this.sortedView);
             this.Controls.Add(this.sortButton);
@@ -302,7 +314,7 @@
             this.Controls.Add(this.resultView);
             this.Controls.Add(this.writeButton);
             this.Controls.Add(this.fetchButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Результаты тестирования — курсовая работа — Сидорук Данил Вадимович, БФИ-2202";
@@ -331,12 +343,13 @@
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
         private System.Windows.Forms.Button writeExcelButton;
         private System.Windows.Forms.Button openExcelButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn result;
         private System.Windows.Forms.Button writeSortExcelButton;
         private System.Windows.Forms.DataGridView sortedView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button sortButton;
+        private System.Windows.Forms.Button insertColumnButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn result;
     }
 }
