@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+
+using Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Word;
+using CheckBox = System.Windows.Forms.CheckBox;
 
 namespace AlgorithmsCourseworkLibrary
 {
@@ -183,6 +188,146 @@ namespace AlgorithmsCourseworkLibrary
         {
             string dateInfo = DateTime.Now.ToString("dddd, dd MMMM yyyy, HH:mm:ss");
             label.Text = dateInfo.Substring(0, 1).ToUpper() + dateInfo.Substring(1);
+        }
+
+
+        // ResultForm.cs
+        public static void OutputRows(DataGridView view, int[] keys, bool[] values)
+        {
+            view.Rows.Clear();
+            for (int i = 0; i != keys.Length; i++)
+            {
+                view.Rows.Add(keys[i], values[i] == true ? "Верно" : "Неверно");
+            }
+        }
+
+        public static void SaveChartAsImage(ChartObject chart)
+        {
+            chart.CopyPicture(
+                Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen,
+                Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap
+            );
+            Bitmap image = new Bitmap(Clipboard.GetImage());
+
+            SaveFileDialog saveFileDIalog = new SaveFileDialog();
+            saveFileDIalog.Filter = "Image (*.jpg) | *.jpg";
+            saveFileDIalog.Title = "Сохранить изображение";
+
+            while (saveFileDIalog.ShowDialog() != DialogResult.OK)
+                continue;
+
+            image.Save(saveFileDIalog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+        }
+
+        public static void WriteExcel(int[] keys, bool[] values)
+        {
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            Workbook workBook;
+            Worksheet workSheet;
+
+            workBook = app.Workbooks.Add();
+            workSheet = (Worksheet)workBook.Worksheets.get_Item(1);
+            workSheet.Name = "Массив исходный";
+            workSheet.Cells[1, 1] = "Массив ответов";
+            for (int i = 0; i != values.Length; i++)
+            {
+                workSheet.Cells[2, i + 1] = "[" + keys[i] + "]";
+                workSheet.Cells[3, i + 1] = Convert.ToInt32(values[i]);
+            }
+
+            Microsoft.Office.Interop.Excel.Range range = workSheet.Range[workSheet.Cells[2, 1], workSheet.Cells[3, values.Length]];
+            range.Cells.Font.Name = "Times New Roman";
+            range.Cells.Font.Size = 14;
+            range.Cells.Columns.AutoFit();
+            range.Borders.get_Item(XlBordersIndex.xlEdgeBottom).LineStyle =
+                Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            range.Borders.get_Item(XlBordersIndex.xlEdgeRight).LineStyle =
+                Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            range.Borders.get_Item(XlBordersIndex.xlInsideHorizontal).LineStyle =
+                Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            range.Borders.get_Item(XlBordersIndex.xlInsideVertical).LineStyle =
+                Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+            range.Borders.get_Item(XlBordersIndex.xlEdgeTop).LineStyle =
+                Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+
+            workSheet.Cells[4, 1] = "Правильные ответы";
+            workSheet.Cells[4, 2] = "=SUM(A3:P3)";
+            workSheet.Cells[5, 1] = "Неправильные ответы";
+            workSheet.Cells[5, 2] = "=" + values.Length + "-SUM(A3:P3)";
+
+            object misValue = System.Reflection.Missing.Value;
+
+            Microsoft.Office.Interop.Excel.Range chartRange;
+
+            ChartObjects xlCharts = (ChartObjects)workSheet.ChartObjects(Type.Missing);
+            ChartObject myChart = (ChartObject)xlCharts.Add(0, 80, 300, 250);
+            Microsoft.Office.Interop.Excel.Chart chartPage = myChart.Chart;
+
+            chartRange = workSheet.get_Range("A4", "B5");
+            chartPage.SetSourceData(chartRange, misValue);
+            chartPage.ChartType = XlChartType.xlColumnClustered;
+            chartPage.Legend.Delete();
+
+            SaveChartAsImage(myChart);
+
+            workSheet.Range[("A7")].Select();
+            app.Visible = true;
+            app.UserControl = true;
+        }
+        public static void WriteWord(int[] keys, bool[] values)
+        {
+            Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
+            var Word = new Microsoft.Office.Interop.Word.Application
+            {
+                Visible = true,
+            };
+            var inf = Type.Missing;
+            var Document = Word.Documents.Add(inf);
+            Word.Selection.TypeText("Массив ответов");
+
+            object t1 = WdDefaultTableBehavior.wdWord9TableBehavior;
+            object t2 = WdAutoFitBehavior.wdAutoFitContent;
+
+            Table tbl = Word.ActiveDocument.Tables.Add(Word.Selection.Range, 2, values.Length, t1, t2);
+            for (int i = 0; i != keys.Length; ++i)
+            {
+                tbl.Cell(1, i + 1).Range.InsertAfter("[" + Convert.ToString(keys[i]) + "]");
+                tbl.Cell(2, i + 1).Range.InsertAfter(Convert.ToInt32(values[i]).ToString());
+            }
+        }
+
+        public static void Sort(int[] keys, bool[] values)
+        {
+            for (int j = 1; j != values.Length; ++j)
+            {
+                var key = keys[j];
+                var value = values[j];
+                var i = j - 1;
+
+                while (i >= 0 && Convert.ToInt32(values[i]) > Convert.ToInt32(value))
+                {
+                    keys[i + 1] = keys[i];
+                    values[i + 1] = values[i];
+                    i = i - 1;
+                }
+
+                keys[i + 1] = key;
+                values[i + 1] = value;
+            }
+        }
+
+        public static void OpenFile(string filters, string title)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = filters;
+            openFileDialog.Title = title;
+            if (openFileDialog.ShowDialog() != DialogResult.OK)
+            {
+                MessageBox.Show("Вы не выбрали файл", "Открыть", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            System.Diagnostics.Process.Start(openFileDialog.FileName);
+
         }
     }
 }
