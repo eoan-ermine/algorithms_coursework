@@ -103,7 +103,7 @@ namespace AlgorithmsCourseworkGUI
                 Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
 
             workSheet.Cells[4, 1] = "Правильные ответы";
-            workSheet.Cells[4, 2] = AlgorithmsCoursework.n;
+            workSheet.Cells[4, 2] = "=SUM(A3:P3)";
             workSheet.Cells[5, 1] = "Неправильные ответы";
             workSheet.Cells[5, 2] = AlgorithmsCoursework.answers.Length - AlgorithmsCoursework.n;
 
