@@ -26,7 +26,7 @@ namespace AlgorithmsCourseworkGUI
             webView.CoreWebView2.Navigate("http://localhost/report.pdf");
 
         }
-=
+
         private void SetPage(int pageIndex)
         {
             string newUri = "http://localhost/report.pdf#page=" + pageIndex;

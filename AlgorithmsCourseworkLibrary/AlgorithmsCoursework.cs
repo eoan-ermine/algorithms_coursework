@@ -184,6 +184,13 @@ namespace AlgorithmsCourseworkLibrary
             updateDate(label);
         }
 
+        public static void setupProgressBar(ProgressBar progressBar)
+        {
+            progressBar.Minimum = 0;
+            progressBar.Maximum = 16;
+            progressBar.Value = n;
+        }
+
         private static void updateDate(ToolStripStatusLabel label)
         {
             string dateInfo = DateTime.Now.ToString("dddd, dd MMMM yyyy, HH:mm:ss");

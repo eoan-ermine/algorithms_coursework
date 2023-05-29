@@ -44,6 +44,7 @@
             this.timeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -55,11 +56,12 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 552);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 679);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1163, 59);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1551, 73);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // flowLayoutPanel1
@@ -68,18 +70,20 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.confirmButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(462, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(617, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(238, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 65);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // confirmButton
             // 
             this.confirmButton.AutoSize = true;
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.confirmButton.Location = new System.Drawing.Point(3, 3);
+            this.confirmButton.Location = new System.Drawing.Point(4, 4);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(232, 39);
+            this.confirmButton.Size = new System.Drawing.Size(309, 57);
             this.confirmButton.TabIndex = 0;
             this.confirmButton.Text = "Подтвердить";
             this.confirmButton.UseVisualStyleBackColor = true;
@@ -88,27 +92,30 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(0, 550);
+            this.label8.Location = new System.Drawing.Point(0, 677);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1179, 2);
+            this.label8.Size = new System.Drawing.Size(1572, 2);
             this.label8.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.Size = new System.Drawing.Size(155, 31);
             this.label1.TabIndex = 14;
             this.label1.Text = "Вопрос №3";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(17, 44);
+            this.label2.Location = new System.Drawing.Point(23, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1134, 41);
+            this.label2.Size = new System.Drawing.Size(1512, 50);
             this.label2.TabIndex = 15;
             this.label2.Text = "Выберите правильные варианты ответа";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,9 +123,10 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 129);
+            this.label3.Location = new System.Drawing.Point(16, 189);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1139, 86);
+            this.label3.Size = new System.Drawing.Size(1519, 106);
             this.label3.TabIndex = 16;
             this.label3.Text = "Какие основные процессы принято описывать в рамках подхода управления ИТ на основ" +
     "е услуг?";
@@ -128,9 +136,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(17, 226);
+            this.checkBox1.Location = new System.Drawing.Point(23, 308);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(290, 29);
+            this.checkBox1.Size = new System.Drawing.Size(362, 35);
             this.checkBox1.TabIndex = 17;
             this.checkBox1.Text = "Управление инцидентами";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -139,9 +148,10 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox2.Location = new System.Drawing.Point(17, 270);
+            this.checkBox2.Location = new System.Drawing.Point(23, 362);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(279, 29);
+            this.checkBox2.Size = new System.Drawing.Size(347, 35);
             this.checkBox2.TabIndex = 18;
             this.checkBox2.Text = "Управление персоналом";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -150,9 +160,10 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.Location = new System.Drawing.Point(17, 315);
+            this.checkBox3.Location = new System.Drawing.Point(23, 418);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(253, 29);
+            this.checkBox3.Size = new System.Drawing.Size(314, 35);
             this.checkBox3.TabIndex = 19;
             this.checkBox3.Text = "Управление проектом";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -161,9 +172,10 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox4.Location = new System.Drawing.Point(17, 359);
+            this.checkBox4.Location = new System.Drawing.Point(23, 472);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(293, 29);
+            this.checkBox4.Size = new System.Drawing.Size(366, 35);
             this.checkBox4.TabIndex = 20;
             this.checkBox4.Text = "Управление изменениями";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -172,50 +184,61 @@
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox5.Location = new System.Drawing.Point(17, 403);
+            this.checkBox5.Location = new System.Drawing.Point(23, 526);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(258, 29);
+            this.checkBox5.Size = new System.Drawing.Size(321, 35);
             this.checkBox5.TabIndex = 21;
             this.checkBox5.Text = "Управление временем";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.timeLabel,
             this.toolStripStatusLabel1,
             this.versionLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 604);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 744);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1163, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1551, 26);
             this.statusStrip1.TabIndex = 22;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // timeLabel
             // 
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(79, 17);
+            this.timeLabel.Size = new System.Drawing.Size(102, 20);
             this.timeLabel.Text = "Дата и время";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(962, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1333, 20);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // versionLabel
             // 
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.versionLabel.Size = new System.Drawing.Size(76, 17);
+            this.versionLabel.Size = new System.Drawing.Size(96, 20);
             this.versionLabel.Text = "Версия: 1.0.0";
             this.versionLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(0, 0);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(1551, 23);
+            this.progressBar.TabIndex = 23;
+            // 
             // Question03
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 626);
+            this.ClientSize = new System.Drawing.Size(1551, 770);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
@@ -227,6 +250,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Question03";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вопрос №3 — курсовая работа — Сидорук Данил Вадимович, БФИ-2202";
@@ -259,5 +283,6 @@
         private System.Windows.Forms.ToolStripStatusLabel timeLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

@@ -14,6 +14,7 @@ namespace AlgorithmsCourseworkGUI
 
             AlgorithmsCoursework.setupVersion(versionLabel);
             AlgorithmsCoursework.setupTimer(timeLabel);
+            AlgorithmsCoursework.setupProgressBar(progressBar);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
