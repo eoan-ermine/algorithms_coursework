@@ -43,6 +43,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.questionsCount = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -55,7 +56,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 684);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -69,7 +70,7 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.confirmButton);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(617, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 63);
             this.flowLayoutPanel1.TabIndex = 10;
@@ -79,7 +80,7 @@
             this.confirmButton.AutoSize = true;
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirmButton.Location = new System.Drawing.Point(4, 4);
-            this.confirmButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(4);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(309, 57);
             this.confirmButton.TabIndex = 0;
@@ -103,9 +104,9 @@
             this.label1.Location = new System.Drawing.Point(16, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
+            this.label1.Size = new System.Drawing.Size(207, 31);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Вопрос №8";
+            this.label1.Text = "Вопрос №8 / 16";
             // 
             // label2
             // 
@@ -142,7 +143,7 @@
             "Financials",
             "KM"});
             this.listBox1.Location = new System.Drawing.Point(23, 294);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(755, 292);
             this.listBox1.TabIndex = 17;
@@ -159,7 +160,7 @@
             "Система управления виртуальными логистическими цепочками",
             "Система управления жизненным циклом продукта"});
             this.listBox2.Location = new System.Drawing.Point(787, 294);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(747, 292);
             this.listBox2.TabIndex = 18;
@@ -169,7 +170,7 @@
             this.unionButton.AutoSize = true;
             this.unionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.unionButton.Location = new System.Drawing.Point(664, 635);
-            this.unionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unionButton.Margin = new System.Windows.Forms.Padding(4);
             this.unionButton.Name = "unionButton";
             this.unionButton.Size = new System.Drawing.Size(224, 48);
             this.unionButton.TabIndex = 19;
@@ -218,11 +219,23 @@
             this.progressBar.Size = new System.Drawing.Size(1551, 23);
             this.progressBar.TabIndex = 32;
             // 
+            // questionsCount
+            // 
+            this.questionsCount.AutoSize = true;
+            this.questionsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.questionsCount.Location = new System.Drawing.Point(1210, 42);
+            this.questionsCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.questionsCount.Name = "questionsCount";
+            this.questionsCount.Size = new System.Drawing.Size(295, 31);
+            this.questionsCount.TabIndex = 33;
+            this.questionsCount.Text = "Осталось 00 вопросов";
+            // 
             // Question08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 770);
+            this.Controls.Add(this.questionsCount);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.unionButton);
@@ -233,7 +246,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Question08";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вопрос №8 — курсовая работа — Сидорук Данил Вадимович, БФИ-2202";
@@ -265,5 +278,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label questionsCount;
     }
 }

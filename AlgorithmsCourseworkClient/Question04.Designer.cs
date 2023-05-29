@@ -45,6 +45,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.questionsCount = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -105,9 +106,9 @@
             this.label1.Location = new System.Drawing.Point(16, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
+            this.label1.Size = new System.Drawing.Size(207, 31);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Вопрос №4";
+            this.label1.Text = "Вопрос №4 / 16";
             // 
             // label2
             // 
@@ -232,11 +233,23 @@
             this.progressBar.Size = new System.Drawing.Size(1551, 23);
             this.progressBar.TabIndex = 24;
             // 
+            // questionsCount
+            // 
+            this.questionsCount.AutoSize = true;
+            this.questionsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.questionsCount.Location = new System.Drawing.Point(1210, 41);
+            this.questionsCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.questionsCount.Name = "questionsCount";
+            this.questionsCount.Size = new System.Drawing.Size(295, 31);
+            this.questionsCount.TabIndex = 25;
+            this.questionsCount.Text = "Осталось 00 вопросов";
+            // 
             // Question04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 770);
+            this.Controls.Add(this.questionsCount);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.checkBox5);
@@ -283,5 +296,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label questionsCount;
     }
 }

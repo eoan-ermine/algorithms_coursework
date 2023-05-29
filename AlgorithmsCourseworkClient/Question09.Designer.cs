@@ -47,6 +47,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.questionsCount = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -59,7 +60,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 679);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -73,7 +74,7 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.confirmButton);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(617, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 65);
             this.flowLayoutPanel1.TabIndex = 10;
@@ -83,7 +84,7 @@
             this.confirmButton.AutoSize = true;
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirmButton.Location = new System.Drawing.Point(4, 4);
-            this.confirmButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(4);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(309, 57);
             this.confirmButton.TabIndex = 0;
@@ -98,9 +99,9 @@
             this.label1.Location = new System.Drawing.Point(16, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
+            this.label1.Size = new System.Drawing.Size(207, 31);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Вопрос №9";
+            this.label1.Text = "Вопрос №9 / 16";
             // 
             // label2
             // 
@@ -122,7 +123,7 @@
             "Управление инцидентами",
             "Управление релизами"});
             this.CB1.Location = new System.Drawing.Point(29, 211);
-            this.CB1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CB1.Margin = new System.Windows.Forms.Padding(4);
             this.CB1.Name = "CB1";
             this.CB1.Size = new System.Drawing.Size(160, 24);
             this.CB1.TabIndex = 16;
@@ -136,7 +137,7 @@
             "Управление инцидентами",
             "Управление релизами"});
             this.CB2.Location = new System.Drawing.Point(29, 314);
-            this.CB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CB2.Margin = new System.Windows.Forms.Padding(4);
             this.CB2.Name = "CB2";
             this.CB2.Size = new System.Drawing.Size(160, 24);
             this.CB2.TabIndex = 17;
@@ -150,7 +151,7 @@
             "Управление инцидентами",
             "Управление релизами"});
             this.CB3.Location = new System.Drawing.Point(29, 417);
-            this.CB3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CB3.Margin = new System.Windows.Forms.Padding(4);
             this.CB3.Name = "CB3";
             this.CB3.Size = new System.Drawing.Size(160, 24);
             this.CB3.TabIndex = 18;
@@ -164,7 +165,7 @@
             "Управление инцидентами",
             "Управление релизами"});
             this.CB4.Location = new System.Drawing.Point(29, 521);
-            this.CB4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CB4.Margin = new System.Windows.Forms.Padding(4);
             this.CB4.Name = "CB4";
             this.CB4.Size = new System.Drawing.Size(160, 24);
             this.CB4.TabIndex = 19;
@@ -262,11 +263,23 @@
             this.progressBar.Size = new System.Drawing.Size(1551, 23);
             this.progressBar.TabIndex = 33;
             // 
+            // questionsCount
+            // 
+            this.questionsCount.AutoSize = true;
+            this.questionsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.questionsCount.Location = new System.Drawing.Point(1210, 37);
+            this.questionsCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.questionsCount.Name = "questionsCount";
+            this.questionsCount.Size = new System.Drawing.Size(295, 31);
+            this.questionsCount.TabIndex = 34;
+            this.questionsCount.Text = "Осталось 00 вопросов";
+            // 
             // Question09
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 770);
+            this.Controls.Add(this.questionsCount);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label8);
@@ -281,7 +294,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Question09";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вопрос №9 — курсовая работа — Сидорук Данил Вадимович, БФИ-2202";
@@ -317,5 +330,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label questionsCount;
     }
 }

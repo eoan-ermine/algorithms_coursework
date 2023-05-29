@@ -191,6 +191,11 @@ namespace AlgorithmsCourseworkLibrary
             progressBar.Value = n;
         }
 
+        public static void setupRemainingQuestionsCount(System.Windows.Forms.Label label)
+        {
+            label.Text = "Осталось " + (answers.Length - n) + " вопросов";
+        }
+
         private static void updateDate(ToolStripStatusLabel label)
         {
             string dateInfo = DateTime.Now.ToString("dddd, dd MMMM yyyy, HH:mm:ss");
