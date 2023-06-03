@@ -1,6 +1,7 @@
 ﻿using AlgorithmsCourseworkLibrary;
 using Microsoft.Web.WebView2.Core;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace AlgorithmsCourseworkGUI
@@ -18,7 +19,9 @@ namespace AlgorithmsCourseworkGUI
 
         private async void InitializeAsync()
         {
-            await webView.EnsureCoreWebView2Async(null);
+            var env = await CoreWebView2Environment.CreateAsync(userDataFolder: Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            await webView.EnsureCoreWebView2Async(env);
+
             webView.CoreWebView2.SetVirtualHostNameToFolderMapping(hostName: "localhost",
                                                                    folderPath: "",
                                                                    accessKind: CoreWebView2HostResourceAccessKind.Allow);
