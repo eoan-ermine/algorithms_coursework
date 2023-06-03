@@ -12,8 +12,8 @@ namespace AlgorithmsCourseworkGUI
             InitializeComponent();
             InitializeAsync();
 
-            AlgorithmsCoursework.setupVersion(versionLabel);
-            AlgorithmsCoursework.setupTimer(timeLabel);
+            AlgorithmsCoursework.SetupVersion(versionLabel);
+            AlgorithmsCoursework.SetupTimer(timeLabel);
         }
 
         private async void InitializeAsync()
@@ -33,12 +33,12 @@ namespace AlgorithmsCourseworkGUI
             webView.CoreWebView2.Navigate(newUri);
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void titleButton_Click(object sender, EventArgs e)
+        private void TitleButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             TitleForm nextForm = new TitleForm();

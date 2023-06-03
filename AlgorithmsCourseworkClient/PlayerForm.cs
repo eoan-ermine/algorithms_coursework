@@ -12,8 +12,8 @@ namespace AlgorithmsCourseworkGUI
         {
             InitializeComponent();
 
-            AlgorithmsCoursework.setupVersion(versionLabel);
-            AlgorithmsCoursework.setupTimer(timeLabel);
+            AlgorithmsCoursework.SetupVersion(versionLabel);
+            AlgorithmsCoursework.SetupTimer(timeLabel);
         }
 
         private void PlayerForm_Load(object sender, EventArgs e)
@@ -22,7 +22,7 @@ namespace AlgorithmsCourseworkGUI
             this.Text = "Windows Media Player, версия = " + player.versionInfo;
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

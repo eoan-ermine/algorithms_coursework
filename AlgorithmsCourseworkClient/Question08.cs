@@ -11,10 +11,10 @@ namespace AlgorithmsCourseworkGUI
         {
             InitializeComponent();
 
-            AlgorithmsCoursework.setupVersion(versionLabel);
-            AlgorithmsCoursework.setupTimer(timeLabel);
-            AlgorithmsCoursework.setupProgressBar(progressBar);
-            AlgorithmsCoursework.setupRemainingQuestionsCount(questionsCount);
+            AlgorithmsCoursework.SetupVersion(versionLabel);
+            AlgorithmsCoursework.SetupTimer(timeLabel);
+            AlgorithmsCoursework.SetupProgressBar(progressBar);
+            AlgorithmsCoursework.SetupRemainingQuestionsCount(questionsCount);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

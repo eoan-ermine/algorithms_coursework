@@ -109,7 +109,7 @@
             this.titleButton.TabIndex = 0;
             this.titleButton.Text = "Титульный лист";
             this.titleButton.UseVisualStyleBackColor = true;
-            this.titleButton.Click += new System.EventHandler(this.titleButton_Click);
+            this.titleButton.Click += new System.EventHandler(this.TitleButton_Click);
             // 
             // exitButton
             // 
@@ -121,7 +121,7 @@
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "Выход";
             this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // label8
             // 

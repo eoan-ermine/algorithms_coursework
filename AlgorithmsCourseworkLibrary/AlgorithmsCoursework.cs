@@ -168,35 +168,35 @@ namespace AlgorithmsCourseworkLibrary
             }
         }
 
-        public static void setupVersion(ToolStripStatusLabel label)
+        public static void SetupVersion(ToolStripStatusLabel label)
         {
             int version = AlgorithmsCoursework.version;
             int major = version / 100, minor = (version / 10) % 10, patch = version % 10;
             label.Text = string.Format("Версия программы: {0}.{1}.{2}", major, minor, patch);
         }
 
-        public static void setupTimer(ToolStripStatusLabel label)
+        public static void SetupTimer(ToolStripStatusLabel label)
         {
             Timer timer = new Timer();
-            timer.Tick += (object e, EventArgs v) => updateDate(label);
+            timer.Tick += (object e, EventArgs v) => UpdateDate(label);
             timer.Interval = 1000;
             timer.Start();
-            updateDate(label);
+            UpdateDate(label);
         }
 
-        public static void setupProgressBar(ProgressBar progressBar)
+        public static void SetupProgressBar(ProgressBar progressBar)
         {
             progressBar.Minimum = 0;
             progressBar.Maximum = 16;
             progressBar.Value = n;
         }
 
-        public static void setupRemainingQuestionsCount(System.Windows.Forms.Label label)
+        public static void SetupRemainingQuestionsCount(System.Windows.Forms.Label label)
         {
             label.Text = "Осталось " + (answers.Length - n) + " вопросов";
         }
 
-        private static void updateDate(ToolStripStatusLabel label)
+        private static void UpdateDate(ToolStripStatusLabel label)
         {
             string dateInfo = DateTime.Now.ToString("dddd, dd MMMM yyyy, HH:mm:ss");
             label.Text = dateInfo.Substring(0, 1).ToUpper() + dateInfo.Substring(1);
@@ -221,9 +221,11 @@ namespace AlgorithmsCourseworkLibrary
             );
             Bitmap image = new Bitmap(Clipboard.GetImage());
 
-            SaveFileDialog saveFileDIalog = new SaveFileDialog();
-            saveFileDIalog.Filter = "Image (*.jpg) | *.jpg";
-            saveFileDIalog.Title = "Сохранить изображение";
+            SaveFileDialog saveFileDIalog = new SaveFileDialog
+            {
+                Filter = "Image (*.jpg) | *.jpg",
+                Title = "Сохранить изображение"
+            };
 
             while (saveFileDIalog.ShowDialog() != DialogResult.OK)
                 continue;
@@ -325,7 +327,7 @@ namespace AlgorithmsCourseworkLibrary
                 {
                     keys[i + 1] = keys[i];
                     values[i + 1] = values[i];
-                    i = i - 1;
+                    i--;
                 }
 
                 keys[i + 1] = key;
@@ -335,9 +337,11 @@ namespace AlgorithmsCourseworkLibrary
 
         public static void OpenFile(string filters, string title)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = filters;
-            openFileDialog.Title = title;
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = filters,
+                Title = title
+            };
             if (openFileDialog.ShowDialog() != DialogResult.OK)
             {
                 MessageBox.Show("Вы не выбрали файл", "Открыть", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -16,8 +16,8 @@ namespace AlgorithmsCourseworkGUI
         {
             InitializeComponent();
 
-            AlgorithmsCoursework.setupVersion(versionLabel);
-            AlgorithmsCoursework.setupTimer(timeLabel);
+            AlgorithmsCoursework.SetupVersion(versionLabel);
+            AlgorithmsCoursework.SetupTimer(timeLabel);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
