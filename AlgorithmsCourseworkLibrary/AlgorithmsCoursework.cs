@@ -204,6 +204,26 @@ namespace AlgorithmsCourseworkLibrary
 
 
         // ResultForm.cs
+        public static int[,] GetResultsMatrix()
+        {
+            int[,] resultsMatrix = new int[answers.Length, 2];
+            for (int i = 0; i != answers.Length; i++)
+            {
+                resultsMatrix[i, 0] = i + 1;
+                resultsMatrix[i, 1] = answers[i] == true ? 1 : 0;
+            }
+            return resultsMatrix;
+        }
+
+        public static void OutputRows(DataGridView view, int[,] resultsMatrix)
+        {
+            view.Rows.Clear();
+            for (int i = 0; i != resultsMatrix.GetLength(0); ++i)
+            {
+                view.Rows.Add(resultsMatrix[i, 0], resultsMatrix[i, 1]);
+            }
+        }
+
         public static void OutputRows(DataGridView view, int[] keys, bool[] values)
         {
             view.Rows.Clear();

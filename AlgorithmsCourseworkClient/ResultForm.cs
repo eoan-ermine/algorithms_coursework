@@ -27,11 +27,8 @@ namespace AlgorithmsCourseworkGUI
 
         private void fetchButton_Click(object sender, EventArgs e)
         {
-            AlgorithmsCoursework.OutputRows(
-                resultView,
-                Enumerable.Range(1, AlgorithmsCoursework.answers.Length).ToArray(),
-                AlgorithmsCoursework.answers
-            );
+            int[,] resultsMatrix = AlgorithmsCoursework.GetResultsMatrix();
+            AlgorithmsCoursework.OutputRows(resultView, resultsMatrix);
         }
 
         private void plotButton_Click(object sender, EventArgs e)
