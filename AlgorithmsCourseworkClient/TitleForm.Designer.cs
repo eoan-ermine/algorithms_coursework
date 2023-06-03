@@ -46,6 +46,7 @@
             this.timeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.resultButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -150,7 +151,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 679);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -165,11 +166,12 @@
             this.flowLayoutPanel1.Controls.Add(this.theoryButton);
             this.flowLayoutPanel1.Controls.Add(this.testButton);
             this.flowLayoutPanel1.Controls.Add(this.playerButton);
+            this.flowLayoutPanel1.Controls.Add(this.resultButton);
             this.flowLayoutPanel1.Controls.Add(this.exitButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(259, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(112, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1033, 52);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1326, 52);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // theoryButton
@@ -177,7 +179,7 @@
             this.theoryButton.AutoSize = true;
             this.theoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.theoryButton.Location = new System.Drawing.Point(4, 4);
-            this.theoryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.theoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.theoryButton.Name = "theoryButton";
             this.theoryButton.Size = new System.Drawing.Size(393, 48);
             this.theoryButton.TabIndex = 0;
@@ -188,13 +190,12 @@
             // testButton
             // 
             this.testButton.AutoSize = true;
-            this.testButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.testButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testButton.Location = new System.Drawing.Point(405, 4);
-            this.testButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.testButton.Margin = new System.Windows.Forms.Padding(4);
             this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(253, 48);
-            this.testButton.TabIndex = 2;
+            this.testButton.Size = new System.Drawing.Size(210, 48);
+            this.testButton.TabIndex = 4;
             this.testButton.Text = "Тестирование";
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
@@ -203,8 +204,8 @@
             // 
             this.playerButton.AutoSize = true;
             this.playerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.playerButton.Location = new System.Drawing.Point(666, 4);
-            this.playerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playerButton.Location = new System.Drawing.Point(623, 4);
+            this.playerButton.Margin = new System.Windows.Forms.Padding(4);
             this.playerButton.Name = "playerButton";
             this.playerButton.Size = new System.Drawing.Size(228, 48);
             this.playerButton.TabIndex = 3;
@@ -216,8 +217,8 @@
             // 
             this.exitButton.AutoSize = true;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(902, 4);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Location = new System.Drawing.Point(1195, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(127, 48);
             this.exitButton.TabIndex = 1;
@@ -259,6 +260,20 @@
             this.versionLabel.Text = "Версия: 1.0.0";
             this.versionLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
+            // resultButton
+            // 
+            this.resultButton.AutoSize = true;
+            this.resultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.resultButton.Location = new System.Drawing.Point(859, 4);
+            this.resultButton.Margin = new System.Windows.Forms.Padding(4);
+            this.resultButton.Name = "resultButton";
+            this.resultButton.Size = new System.Drawing.Size(328, 48);
+            this.resultButton.TabIndex = 5;
+            this.resultButton.Text = "Результаты тестирования";
+            this.resultButton.UseVisualStyleBackColor = true;
+            this.resultButton.Visible = false;
+            this.resultButton.Click += new System.EventHandler(this.resultButton_Click);
+            // 
             // TitleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,10 +289,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TitleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Титульный лист — курсовая работа — Сидорук Данил Вадимович, БФИ-2202";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TitleForm_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -303,12 +319,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button theoryButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel timeLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel versionLabel;
         private System.Windows.Forms.Button playerButton;
+        private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Button resultButton;
     }
 }
 

@@ -13,6 +13,8 @@ namespace AlgorithmsCourseworkGUI
 
             AlgorithmsCoursework.SetupVersion(versionLabel);
             AlgorithmsCoursework.SetupTimer(timeLabel);
+
+            KeyPreview = true;
         }
         private void exitButton_Click(object sender, System.EventArgs e)
         {
@@ -38,6 +40,23 @@ namespace AlgorithmsCourseworkGUI
             this.Hide();
             PlayerForm nextForm = new PlayerForm();
             nextForm.Show();
+        }
+
+        private void resultButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResultForm nextForm = new ResultForm();
+            nextForm.Show();
+        }
+
+        private void TitleForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt && e.KeyCode == Keys.F5)
+            {
+                MessageBox.Show("Режим разработчика успешно активирован");
+                resultButton.Visible = true;
+                e.Handled = true;
+            }
         }
     }
 }
