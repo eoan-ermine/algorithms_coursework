@@ -53,7 +53,6 @@ namespace AlgorithmsCourseworkGUI
             String tag = (String) ((ToolStripItem)sender).Tag;
             if (tag != null && tag.Length != 0) {
                 SetPage(Convert.ToInt32(tag));
-                MessageBox.Show(webView.Source.ToString());
             }
         }
     }
