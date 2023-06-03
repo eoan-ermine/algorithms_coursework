@@ -25,7 +25,7 @@ namespace AlgorithmsCourseworkGUI
         private void confirmButton_Click(object sender, EventArgs e)
         {
             int result = AlgorithmsCoursework.UnaryQuestion(1, answerInput.Text, "инцидент");
-            if (result == 1)
+            if (result != -1)
             {
                 this.Hide();
                 Question03 nextForm = new Question03();

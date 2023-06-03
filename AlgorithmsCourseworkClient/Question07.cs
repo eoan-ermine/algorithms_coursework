@@ -28,12 +28,9 @@ namespace AlgorithmsCourseworkGUI
                 listBox2.Items[0].ToString(), listBox2.Items[1].ToString(), listBox2.Items[2].ToString(),
                 listBox2.Items[3].ToString(), listBox2.Items[4].ToString()
             );
-            if (result == 1)
-            {
-                this.Hide();
-                Question08 nextForm = new Question08();
-                nextForm.Show();
-            }
+            this.Hide();
+            Question08 nextForm = new Question08();
+            nextForm.Show();
         }
 
         private void unionButton_Click(object sender, EventArgs e)

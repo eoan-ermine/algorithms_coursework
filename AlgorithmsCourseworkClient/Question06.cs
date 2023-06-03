@@ -25,7 +25,7 @@ namespace AlgorithmsCourseworkGUI
         private void confirmButton_Click(object sender, EventArgs e)
         {
             int result = AlgorithmsCoursework.Question06(radioButton1, radioButton2, radioButton3, radioButton4);
-            if (result == 1)
+            if (result != -1)
             {
                 this.Hide();
                 Question06 nextForm = new Question06();
