@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.fetchButton = new System.Windows.Forms.Button();
             this.writeButton = new System.Windows.Forms.Button();
             this.resultView = new System.Windows.Forms.DataGridView();
@@ -54,6 +54,7 @@
             this.sortButton = new System.Windows.Forms.Button();
             this.insertColumnButton = new System.Windows.Forms.Button();
             this.gradeLabel = new System.Windows.Forms.Label();
+            this.titleButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.resultView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -136,7 +137,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(766, 326);
+            this.exitButton.Location = new System.Drawing.Point(766, 413);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(120, 57);
             this.exitButton.TabIndex = 5;
@@ -146,20 +147,20 @@
             // 
             // chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart.Legends.Add(legend2);
             this.chart.Location = new System.Drawing.Point(892, 63);
             this.chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Верно";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Неверно";
-            this.chart.Series.Add(series1);
-            this.chart.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Верно";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Неверно";
+            this.chart.Series.Add(series3);
+            this.chart.Series.Add(series4);
             this.chart.Size = new System.Drawing.Size(263, 525);
             this.chart.TabIndex = 6;
             this.chart.Text = "chart1";
@@ -292,11 +293,22 @@
             this.gradeLabel.TabIndex = 31;
             this.gradeLabel.Text = "Ваша оценка по результатам тестирования: 0";
             // 
+            // titleButton
+            // 
+            this.titleButton.Location = new System.Drawing.Point(766, 326);
+            this.titleButton.Name = "titleButton";
+            this.titleButton.Size = new System.Drawing.Size(120, 57);
+            this.titleButton.TabIndex = 32;
+            this.titleButton.Text = "К титульному листу";
+            this.titleButton.UseVisualStyleBackColor = true;
+            this.titleButton.Click += new System.EventHandler(this.titleButton_Click);
+            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 626);
+            this.Controls.Add(this.titleButton);
             this.Controls.Add(this.gradeLabel);
             this.Controls.Add(this.insertColumnButton);
             this.Controls.Add(this.writeSortExcelButton);
@@ -349,5 +361,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn number;
         private System.Windows.Forms.DataGridViewTextBoxColumn result;
         private System.Windows.Forms.Label gradeLabel;
+        private System.Windows.Forms.Button titleButton;
     }
 }

@@ -106,5 +106,14 @@ namespace AlgorithmsCourseworkGUI
             column.Name = name;
             resultView.Columns.Add(column);
         }
+
+        private void titleButton_Click(object sender, EventArgs e)
+        {
+            AlgorithmsCoursework.ClearResults();
+
+            this.Hide();
+            TitleForm nextForm = new TitleForm();
+            nextForm.Show();
+        }
     }
 }

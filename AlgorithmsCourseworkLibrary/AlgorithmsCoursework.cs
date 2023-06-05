@@ -384,5 +384,12 @@ namespace AlgorithmsCourseworkLibrary
             System.Diagnostics.Process.Start(openFileDialog.FileName);
 
         }
+
+        // Сброс состояния прохождения тестирования к изначальному
+        public static void ClearResults()
+        {
+            n = 0;
+            answers = new bool[16];
+        }
     }
 }
