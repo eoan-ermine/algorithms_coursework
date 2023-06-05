@@ -11,11 +11,11 @@ namespace AlgorithmsCourseworkGUI
         int[] sortedKeys  = null;
         bool[] sortedValues = null;
 
-        // ...
         public ResultForm()
         {
             InitializeComponent();
 
+            gradeLabel.Text = "Ваша оценка по результатам тестирования: " + AlgorithmsCoursework.CalculateGrade();
             AlgorithmsCoursework.SetupVersion(versionLabel);
             AlgorithmsCoursework.SetupTimer(timeLabel);
         }

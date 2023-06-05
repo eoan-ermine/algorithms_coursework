@@ -204,6 +204,20 @@ namespace AlgorithmsCourseworkLibrary
 
 
         // ResultForm.cs
+
+        public static int CalculateGrade()
+        {
+            double correctProcent = (double) n / answers.Length;
+            if (correctProcent >= 100)
+                return 5;
+            else if (correctProcent >= 75)
+                return 4;
+            else if (correctProcent >= 60)
+                return 3;
+            return 2;
+
+        }
+
         public static int[,] GetResultsMatrix()
         {
             int[,] resultsMatrix = new int[answers.Length, 2];
